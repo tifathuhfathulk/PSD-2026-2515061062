@@ -45,7 +45,7 @@ untuk tambah nama barang ke akhir list inventory
 Print konfirmasi dengan nama barang
 
 - else:
-print("Nama barang tidak boleh kosong.")
+- print("Nama barang tidak boleh kosong.")
 Jika nama kosong, akan menampilkan pesan error.
 
 <img width="979" height="435" alt="WhatsApp Image 2026-04-22 at 22 00 21" src="https://github.com/user-attachments/assets/69c7d5f4-89a7-4cf4-963b-e5d160f12287" />
@@ -79,7 +79,7 @@ untuk menampilkan error jika input yang dimasukkan bukan angka
 - elif choice == 3:
 jika user memilih menu ketiga
 
-cari = input("Nama barang dicari: ").strip().lower()
+- cari = input("Nama barang dicari: ").strip().lower()
 agar user bisa menginputkan nama barang yang ingin dicari di inventaris
 
 - found = False
