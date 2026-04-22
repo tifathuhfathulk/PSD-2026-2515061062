@@ -4,7 +4,7 @@
 Program inventaris barang toko merupakan sebuah sistem sederhana yang dirancang untuk membantu pengelolaan data barang menggunakan struktur data list. Dalam implementasinya, setiap barang yang ada di toko disimpan dalam sebuah list yang berisi informasi penting berupa nama barang. Dengan menggunakan list, program dapat dengan mudah melakukan berbagai operasi seperti menambah data barang baru, menampilkan seluruh daftar barang, mencari posisi barang dalam list, hingga menghapus barang yang sudah tidak tersedia. Struktur list dipilih karena sifatnya yang dinamis, sehingga memudahkan pengelolaan data yang dapat berubah sewaktu-waktu sesuai kondisi stok di toko.
 Program inventaris barang ini dibuat dengan tujuan untuk meningkatkan efisiensi dan ketertiban dalam pengelolaan stok barang di toko. Tanpa sistem yang terorganisir, pemilik toko akan kesulitan memantau jumlah barang, berisiko mengalami kehabisan stok, atau bahkan terjadi kesalahan pencatatan. Dengan adanya program ini, proses pencatatan menjadi  lebih cepat, akurat, dan mudah diakses.
 
-## Kode Program
+## Source Code
 <img width="1800" height="1008" alt="● tugas_akhir_judul1 py - Visual Studio Code 4_22_2026 6_02_31 PM" src="https://github.com/user-attachments/assets/6d7146dd-6855-4c94-96cc-0615b2670720" />
 <img width="1800" height="1008" alt="● tugas_akhir_judul1 py - Visual Studio Code 4_22_2026 6_02_48 PM" src="https://github.com/user-attachments/assets/b4c4a32c-8efb-4a60-ae6e-7617a79a3781" />
 <img width="1800" height="1008" alt="● tugas_akhir_judul1 py - Visual Studio Code 4_22_2026 6_03_00 PM" src="https://github.com/user-attachments/assets/b327b456-5430-45f1-bc0b-1eaeccadd2f3" />
@@ -162,5 +162,5 @@ berikut adalah output yang keluar ketika user memilih menu kelima
 <img width="1026" height="331" alt="WhatsApp Image 2026-04-22 at 22 46 44" src="https://github.com/user-attachments/assets/8f38dd9a-a97f-4920-978a-f31de7549b36" />
 sistem akan menampilkan list akhir dan teks 'Terima kasih! keluar dari program"
 
-## Video Penjelasan Kode Program
+## Video YouTube
 - https://youtu.be/JXt07A-xakU
