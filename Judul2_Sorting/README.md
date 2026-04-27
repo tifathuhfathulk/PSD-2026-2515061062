@@ -8,3 +8,5 @@ Sistem pengurutan skor tertinggi ini berfungsi untuk menampilkan daftar pemain d
 <img width="1920" height="1008" alt="● tugas_akhir_judul2 py - Visual Studio Code 4_27_2026 7_55_23 PM" src="https://github.com/user-attachments/assets/a4617cc8-34aa-4212-bafa-abfc589457f5" />
 
 ## Penjelasan Source Code
+- def tukar(arr, i, j): untuk mendefinisikan fungsi bernama tukar dengan parameter arr berupa list yang berisi skor, i merupakan posisi angka pertama, dan j merupakan posisi angka kedua
+- temp = arr[i] untuk 
