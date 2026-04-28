@@ -64,4 +64,4 @@ Sistem pengurutan skor tertinggi ini berfungsi untuk menampilkan daftar pemain d
 - Kemudian sistem akan menampilkan ranking tertingi(high score), yang mana dalam pengurutan data tersebut menggunakan fungsi bubble_sort_desc tadi
 
 ## Link Video YouTube
-https://youtu.be/vfCMNqvhCx0
+- https://youtu.be/vfCMNqvhCx0
