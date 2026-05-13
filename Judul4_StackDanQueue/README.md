@@ -1,7 +1,7 @@
 # Sistem Waiting List Restaurant
 
 ## Deskripsi Singkat
-Waiting List Restoran adalah daftar tunggu yang digunakan untuk mengatur antrian pelanggan saat semua meja sudah penuh. Tujuannya adalah untuk memudahkan restoran untuk menyiapkan pesanan sesuai dengan antrian pelanggan, sehingga tidak terjadi kekacawan atau keributan karena pelanggan yang datang duluan tidak dilayani lebih dulu. Dalam programnya, queue linked list dipilih karena bekerja seperti antrian sungguhan dengan aturan FIFO (pertama masuk, pertama keluar), sehingga pelanggan pertama yang datang dilayani duluan. Struktur ini juga fleksibel, bisa menambah atau menghapus pelanggan dengan cepat tanpa batas ukuran seperti array biasa, membuatnya sangat cocok untuk situasi restoran yang sibuk.
+Waiting List Restoran adalah daftar tunggu yang digunakan untuk mengatur antrian pelanggan sesuai urutan kedatangannya. Tujuannya adalah untuk memudahkan restoran untuk menyiapkan pesanan sesuai dengan antrian pelanggan, sehingga tidak terjadi kekacawan atau keributan karena pelanggan yang datang duluan tidak dilayani lebih dulu. Dalam programnya, queue linked list dipilih karena bekerja seperti antrian sungguhan dengan aturan FIFO (pertama masuk, pertama keluar), sehingga pelanggan pertama yang datang dilayani duluan. Struktur ini juga fleksibel, bisa menambah atau menghapus pelanggan dengan cepat tanpa batas ukuran seperti array biasa, membuatnya sangat cocok untuk situasi restoran yang sibuk.
 ## Source Code
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/c2099c42-aa22-472d-80c1-e7650f765aaa" />
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/48d61039-e5e7-4000-81c7-b1bc0f49010e" />
