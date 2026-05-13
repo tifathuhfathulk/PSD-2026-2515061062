@@ -14,7 +14,7 @@ Waiting List Restoran adalah daftar tunggu yang digunakan untuk mengatur antrian
 - self.data = data Baris ini menyimpan nilai yang diberikan (data) ke dalam Node yang baru dibuat, sehingga Node tersebut "mengingat" data itu.
 - self.next = None Baris ini membuat penunjuk (link) ke Node berikutnya dan mengisinya dengan None (kosong) pada awalnya, artinya sekarang Node ini belum terhubung ke Node lain.
 - class QueueLinkedList: Ini mendefinisikan blueprint untuk antrian (queue) yang dibangun dari Node-node tadi.
-- def _init_(self): Konstruktor untuk objek QueueLinkedList; dipanggil otomatis saat membuat antrian baru.
+- def _init_(self): Konstruktor untuk objek QueueLinkedList, dipanggil otomatis saat membuat antrian baru.
 - self.front_ptr = None Ini menyimpan alamat (penunjuk) ke Node paling depan (depan antrian). Di awal dibuat None karena antrian masih kosong.
 - self.rear_ptr = None Ini menyimpan alamat ke Node paling belakang (bagian akhir antrian). Juga None di awal karena kosong.
 - def is_empty(self): mendefinisikan fungsi is_empty untuk mengecek apakah antrian kosong atau tidak
@@ -34,7 +34,7 @@ Waiting List Restoran adalah daftar tunggu yang digunakan untuk mengatur antrian
 - return untuk keluar dari fungsi karena tidak ada yang dihapus.
 - temp = self.front_ptr untuk menyimpan Node depan ke variabel sementara untuk referensi (misal untuk tampilkan datanya sebelum dihapus).
 - print(f"Antrian {temp.data} berhasil dihapus") untuk menampilkan data dari Node yang dihapus (misal nama pelanggan yang keluar dari antrian).
-- self.front_ptr = self.front_ptr.next untyk menggeser penunjuk depan ke Node berikutnya; ini secara logis menghapus Node depan dari antrian.
+- self.front_ptr = self.front_ptr.next untuk menggeser penunjuk depan ke Node berikutnya, ini secara logis menghapus Node depan dari antrian.
 - if self.front_ptr is None: Jika setelah penggeseran, front_ptr jadi None (berarti antrian jadi kosong).
 - self.rear_ptr = None Maka juga ubah rear_ptr jadi None supaya konsisten (tidak ada elemen sama sekali).
 - def peek(self): Fungsi untuk melihat siapa yang ada di depan antrian tanpa menghapusnya.
@@ -99,3 +99,4 @@ Waiting List Restoran adalah daftar tunggu yang digunakan untuk mengatur antrian
 - Jika memilih menu 5 maka program akan selesai, dan jika masih ada antrian di dalam program maka antrian tersbut akan otomatis terhapus dan dianggap sudah dilayani.
 
 ## Link YouTube
+- https://youtu.be/5ECJB3fNTt0
