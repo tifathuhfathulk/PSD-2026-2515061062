@@ -55,16 +55,131 @@ Isinya adalah data awal yang ingin dimasukkan.
 - elif root.left is None: jika root kirinya kosong
 - return root.right maka anak kanan naik menggantikan posisi node ini.
 - elif root.right is None: atau jika root kanannya kosong
--  return root.left  maka anak kiri naik menggantikan posisi node ini.
+- return root.left  maka anak kiri naik menggantikan posisi node ini.
 - else: jika node punya dua anak
--  successor = self.find_min_node(root.right) cari nilai terkecil dari nilai yang lebih besar dulu
--  root.key = successor.key isi data node yang dihapus dengan data successor
--  root.jumlah = successor.jumlah
--  root.right = self.delete_node(root.right, successor.key) lalu hapus successor yang lama
--   return root mengembalikan hasil pohon setelah penghapusan selesai.
--   def delete(self, key): fungsi ini pemanggilan utama untuk hapus barang berdasarkan ID.
+- successor = self.find_min_node(root.right) cari nilai terkecil dari nilai yang lebih besar dulu
+- root.key = successor.key isi data node yang dihapus dengan data successor
+- root.jumlah = successor.jumlah
+- root.right = self.delete_node(root.right, successor.key) lalu hapus successor yang lama
+- return root mengembalikan hasil pohon setelah penghapusan selesai.
+- def delete(self, key): fungsi ini pemanggilan utama untuk hapus barang berdasarkan ID.
 - self.root = self.delete_node(self.root, key) Hasilnya disimpan kembali ke self.root.
 - def search_node(self, root, key): mendefinisikan fungsi untuk mencari barangberdasarkan ID barangnya.
-- 
+- if root is None: jika rootnya kosong
+- return None berartiberarti hasilnya tidak ada
+- if root.key == key: jika root = key berarti ketemu
+- return root kembalikan node tersebut
+- if key < root.key: jika key lebih kecil daripada root,
+- return self.search_node(root.left, key) maka cari di sebelah kiri
+- return self.search_node(root.right, key) jika tidak cari di sebelah kanan
+- def search(self, key):
+- return self.search_node(self.root, key) mendefinisikan fungsi search sederhana yang memanggil fungsi yang diatasnya tadi
+- def sum_barang(self, root): mendefinisikan fungsi untuk mengitung total stok barang
+- if root is None: jika rootnya masih kosong.
+- return 0 maka akan mengembalikan nilai 0
+- return root.jumlah + self.sum_barang(root.left) + self.sum_barang(root.right) jika tidak maka ambil juamlah node sekarang, tambahkan jumlah dari kiri dan tambahkan juamlah dari kanan
+- def find_successor(self, root, key): mendefinisikan fungsi untuk mencari nilai terkecil dari nilai yang lebih besar (mencari nilai barang setelahnya)
+- current = root current dipakai untuk menelusuri pohon.
+- successor = None successor menyimpan calon barang setelah ID yang dicari.
+- while current is not None: melakukan perulangan selama current tidak kosong
+- if key < current.key: jika key lebih kecil dari node sekarang:
+- successor = current
+- current = current.left lanjut ke bagian kiri
+- elif key > current.key: jika key lebih besar
+- current = current.right maka lanjut ke sebelah kanan
+- else:
+- break berhenti karena barang yang dicari sudah ditemukan
+- if current is None: jika barangnya tidak sitemukan
+- return None, False kembalikan hasil gagal
+- if current.right is not None: Kalau node yang dicari punya anak kanan
+- successor = self.find_min_node(current.right) successor sebenarnya adalah node paling kecil di kanan.
+- if successor is None: Kalau tidak ada successor
+- return None, False berarti memang tidak punya barang setelahnya.
+- return successor.key, True Mengembalikan ID successor dan tanda bahwa sukses
+- def find_predecessor(self, root, key): mendifinisikan fungsi untuk mencari nilai terbesar dari yang lebih kecil (mencarinilai barang sebelumnya)
+- current = root current dipakai untuk menelusuri pohon.
+- predecessor = None
+- while current is not None: perulangan selama current tidak kosong
+-  if key > current.key:
+-  predecessor = current
+-  current = current.right
+  jika key lebih besar diabandingkan current maka bisa jadi predecsessor lalu cari ke kanan
+- elif key < current.key: atau jika key lebih kecil daripada current maka
+- current = current.left cari ke bagian kiri
+- else:
+- break kalau nilainya sama maka berhenti
+- if current is None:
+- return None, False jika barang tidak ditemukan, gagal.
+- if current.left is not None:
+- temp = current.left kalau node yang dicari punya anak kiri, predecessor adalah node paling besar di subtree kiri.
+- while temp.right is not None:
+- temp = temp.right mulai dari anak kiri, lalu terus ke kanan sampai node paling akhir
+- if predecessor is None: jika tidak ada predecsessor
+- return None, False maka kembalikan nilai false
+- return predecessor.key, True Mengembalikan ID predecessor dan tanda sukses.
+- def main(): mendefinisikan fungsi main() sebagai fungsi utamanya
+- bst = BSTLanjut() untuk membuat pohon inventory.
+- pilih = 0 dipakai untuk menyimpan pilihan menu.
+- while pilih != 7: Program akan terus berjalan sampai user memilih menu 7.
+- print("\n=== Sistem Inventory Barang ===")]
+- print("1. Tambah barang")
+- print("2. Hapus barang")
+- print("3. Cari barang")
+- print("4. Tampilkan barang sebelumnya")
+- print("5. Tampilkan barang setelahnya")
+- print("6. Tampilkan jumlah seluruh barang")
+- print("7. Keluar") Menampilkan pilihan menu yang bisa dipakai user.
+- try: menjalankan kode
+- pilih = int(input("Pilih: ")) mendefinisikan variabel pilih untuk user memilih menunya
+- except ValueError:
+- print("Input tidak valid!") Kalau input bukan angka, muncul pesan error.
+- continue membuat program kembali ke awal loop. 
+- if pilih == 1: jika user memilih menu 1
+- key = int(input("Masukkan ID barang: "))
+- nama = input("Masukkan nama barang: ")
+- jumlah = int(input("Masukkan jumlah barang: ")) user memasukkan ID, nama, dan jumlah barang.
+- bst.insert(key, nama, jumlah) lalu simpan ke BST
+- print("Barang berhasil ditambahkan.") setelah itu tampilkan pesan berhasil
+- elif pilih == 2: jika user memilih menu kedua
+- key = int(input("Masukkan ID barang yang akan dihapus: ")) User memasukkan ID barang.
+- data = bst.search(key) Program cek dulu apakah barang ada.
+- if data is None: kalau data tidak ada
+- print("B.") akan menampilkan pesan barang tidak ditemukan
+- else:
+- bst.delete(key) kalau ditemukan, baru dihapus.
+- print("Barang berhasil dihapus.") menampilkan pesan barang erhasil dihapus
+- elif pilih == 3: jika user memilih menu 3
+- key = int(input("Masukkan ID barang yang dicari: ")) user diminta memasykkan ID barang yang iingin dicari
+- data = bst.search(key) program cek dulu apakah barang ada.
+- if data is None: Jika data barang tidak ada
+- print("Barang tidak ditemukan.") maka menampilkan pesan barang tidak ditemukan
+- else:
+- print(f"Barang ditemukan: ID={data.key}, Nama={data.nama_barang}, Jumlah={data.jumlah}") jika ketemu maka akan menampilkan pesan barang ditemukan beserta data barangnya
+- elif pilih == 4: jika user memilih menu 4
+- key = int(input("Masukkan ID barang: ")) maka user akan diminta memasukkan ID barang terlebih dahulu
+- ans, found = bst.find_predecessor(bst.root, key) kemudian program mencari predecessor dari ID tersebut.
+- if found: jika data ditemukan
+- data = bst.search(ans)
+- print(f"Barang sebelumnya: ID={data.key}, Nama={data.nama_barang}, Jumlah={data.jumlah}") maka akan menampilkan barang sebelumnya dan data barang tersebut.
+- else: kalau tudak ditemukan
+- print("Tidak ada barang sebelumnya.")muncul pesan bahwa barang sebelumnya tidak ada
+- elif pilih == 5: jika user memilih menu 5
+- key = int(input("Masukkan ID barang: ")) program akan meminta user untuk memasukkan ID barang
+- ans, found = bst.find_successor(bst.root, key) kemudian program mencari predecessor dari ID tersebut.
+- if found: jika data ditemukan
+- data = bst.search(ans)
+- print(f"Barang setelahnya: ID={data.key}, Nama={data.nama_barang}, Jumlah={data.jumlah}") maka akan menampilkan barang setelahnya dan data barang tersebut.
+- else: kalau tidak ditemukan
+- print("Tidak ada barang setelahnya.")muncul pesan bahwa barang setelahnya itu tidak ada
+- elif pilih == 6: jika user memilih menu 6
+- print(f"Jumlah seluruh barang: {bst.sum_barang(bst.root)}") maka program akan memanggil fungsi sum dan menampilkan jumlah seluruh barang
+- elif pilih == 7: jika user memilih menu 7 (keluar program)
+- print("Program selesai, Terima Kasih!.") maka akan menampilkan pesan program selesai
+- else:
+- print("Pilihan tidak valid!") kalau user memasukkan angka selain 1–7, program memberi pesan error.
+- if __ name__ == "__ main__":
+- main() memanggil fungsi main untuk menjalankan programnya
+  
 ## Penjelasan Output
+
 ## Link YouTube
