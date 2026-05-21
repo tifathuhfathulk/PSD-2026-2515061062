@@ -195,3 +195,4 @@ Isinya adalah data awal yang ingin dimasukkan.
 - Lalu jika kita memilih menu 7 yaitu keluar program, maka sistem akan menampilkan program selesai, terima kasih, dan perulangan while akan berhenti.
   
 ## Link YouTube
+- https://youtu.be/jh-XUAdKTAk
