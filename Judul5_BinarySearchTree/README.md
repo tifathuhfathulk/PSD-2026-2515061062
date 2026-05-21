@@ -181,5 +181,9 @@ Isinya adalah data awal yang ingin dimasukkan.
 - main() memanggil fungsi main untuk menjalankan programnya
   
 ## Penjelasan Output
+<img width="1920" height="1008" alt="TA5 OUTPUT 1" src="https://github.com/user-attachments/assets/4fdf9a10-a684-4f02-8b64-4eae811765b6" />
+<img width="1920" height="1008" alt="TA5 OUTPUT 2" src="https://github.com/user-attachments/assets/801146c7-6915-4bfc-a728-96a8600f72be" />
+<img width="1920" height="1008" alt="TA5 OUTPUT 3" src="https://github.com/user-attachments/assets/eed6a101-ee7a-406f-b743-9e5cfa190876" />
+<img width="1920" height="1008" alt="TA5 OUTPUT 4" src="https://github.com/user-attachments/assets/d33d64ee-064e-49c9-87e6-723d152ed83c" />
 
 ## Link YouTube
