@@ -186,4 +186,12 @@ Isinya adalah data awal yang ingin dimasukkan.
 <img width="1920" height="1008" alt="TA5 OUTPUT 3" src="https://github.com/user-attachments/assets/eed6a101-ee7a-406f-b743-9e5cfa190876" />
 <img width="1920" height="1008" alt="TA5 OUTPUT 4" src="https://github.com/user-attachments/assets/d33d64ee-064e-49c9-87e6-723d152ed83c" />
 
+- Ketika programnya kita jalankan, maka akan menampilkan pilih menu 1-7, di sini saya memasukkan menu 1 yaitu tambah barang, sistem akan meminta kita untuk memasukkan ID barang, nama barang, dan jumlah barang yang akan dimasukkan ke dalam sistem dan menampilkan barang berhasil ditambahkan.
+- Kemudian ketika kita pilih menu 2 yaitu hapus barang, maka sistem akan meminta kita untuk memasukkan ID barang yang ingin dihapus, kemudian sistem akan mencari terlebih dahulu barang yang ingin kita hapus menggunakan fungsi search, lalu jika sudah ditemukan maka data barang tersebut akan langsung dihapus menggunakan fungsi delate, dan sistem akan menampilkan barang berhasil dihapus.
+- Lalu jika kita memilih menu 3 yaitu cari barang, maka si sistemnya akan langsung mencari barang menggunakan fungsi search, jika ketemu maka sistem akan menampilkan Barang ditemukan dan menyebutkan ID, nama, serta jumlah stok dari barang tersebut.
+- Kemudian jika kita memilih menu 4, yaitu untuk menampilkan barang sebelumnya (predecsessor) maka user akan diminta memasukkan ID, lalu sistem akan mencari menggunakan fungsi search dan jika ditemukan maka akan mencari data sebelumnya menggunakan fungsi predecsessor dan kemudian data tersebut ditampilkan.
+- Kemudian jika kita memilih menu 5, yaitu untuk menampilkan barang setelahnya (succsessor) maka user akan diminta memasukkan ID, lalu sistem akan mencari menggunakan fungsi search dan jika ditemukan maka akan mencari data setelahnya menggunakan fungsi succsessor dan kemudian data tersebut ditampilkan.
+- Lalu ketika kita memilih menu 6 yaitu menampilkan jumlah seluruh barang, maka sitem akan memanggil fungsi sum untuk menghitung jumlah dari seluruh barang yang tersimpan saat ini, kemudian hasilnya akan ditampilkan.
+- Lalu jika kita memilih menu 7 yaitu keluar program, maka sistem akan menampilkan program selesai, terima kasih, dan perulangan while akan berhenti.
+  
 ## Link YouTube
